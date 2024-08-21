@@ -40,3 +40,24 @@ FinalResults=float(Test2CO2)
 print("The car with 3300 KG and 1300 cm cubic will release: ", FinalResults," CO2 Gases")
 print("If we calculate manual with correlation will results ", TestCal," CO2 Gases")
 print("Before with 2200 kg we get:",FinalResult,"This mean we will get an increased gas about:",Increased, )
+
+def predict_co2():
+    while True:
+        try:
+            X1 = int(input("Input your Weight (in Kilogram): "))
+            X2 = int(input("Input your Volume (in CM Cubic): "))
+            break
+        except ValueError:
+            print("Invalid input. Please enter an integer value.")
+
+    TestCO2 = regr_model.predict([[X1, X2]])
+    FinalResult = float(TestCO2)
+    print(f"The car with {X1} KG and {X2} cm cubic will release: {FinalResult} CO2 Gases")
+
+    cont = input("Do you want to continue? (yes/no): ")
+    if cont.lower() == "yes":
+        predict_co2()  # recursive call to go back to the beginning
+    else:
+        print("Goodbye, thanks for using our service!  - Dhika")
+
+predict_co2()  # initial call to start the loop
