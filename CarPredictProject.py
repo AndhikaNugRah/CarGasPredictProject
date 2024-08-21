@@ -39,7 +39,7 @@ Increased=TestCal-FinalResult
 FinalResults=float(Test2CO2)
 print("The car with 3300 KG and 1300 cm cubic will release: ", FinalResults," CO2 Gases")
 print("If we calculate manual with correlation will results ", TestCal," CO2 Gases")
-print("Before with 2200 kg we get:",FinalResult,"This mean we will get an increased gas about:",Increased, )
+print("Before with 2300 kg we get:",FinalResult,"This mean we will get an increased gas about:",Increased, )
 
 def predict_co2():
     while True:
